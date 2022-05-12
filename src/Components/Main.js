@@ -44,7 +44,7 @@ const Main = (props) => {
       )
 
   const sortByWeight = () => {
-    const sortweight = [...filltered].sort((a, b) => {
+    const sortweight = [...pokeData].sort((a, b) => {
       return a.weight - b.weight
     })
     setPokeData([])
@@ -52,7 +52,7 @@ const Main = (props) => {
   }
 
   const sortByHeight = () => {
-    const sortheight = [...filltered].sort((a, b) => {
+    const sortheight = [...pokeData].sort((a, b) => {
       return a.height - b.height
     })
     setPokeData([])
@@ -60,7 +60,7 @@ const Main = (props) => {
   }
 
   const sortByName = () => {
-    const sortheight = [...filltered].sort((a, b) => {
+    const sortheight = [...pokeData].sort((a, b) => {
       return a.name.localeCompare(b.name)
     })
     setPokeData([])

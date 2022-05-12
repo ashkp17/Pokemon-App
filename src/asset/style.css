@@ -296,8 +296,8 @@ text-transform: uppercase;
     text-align: center;
   }
 nav {
-    padding: 1rem;
-    margin: 5px auto;
+    padding:0 1rem;
+    margin: 0px auto;
 }
 .header {
     padding: 10px 0 ;
