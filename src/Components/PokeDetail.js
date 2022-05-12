@@ -29,7 +29,7 @@ const BookDetailPage = ({ match }) => {
     <>
       {loading && (
         <div style={{ color: `green` }}>
-          loading POkeID detail for book ID: <strong>{pokeId}</strong>
+          loading pokemon detail for Poke ID: <strong>{pokeId}</strong>
         </div>
       )}
       {error && (
