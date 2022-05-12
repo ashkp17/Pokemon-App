@@ -41,7 +41,7 @@ body {
 }
 .pokeinfo {
    width: 40rem;
-   margin: 120px auto;
+   margin: 0px auto;
    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
 }
 .card-details{
