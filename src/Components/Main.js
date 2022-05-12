@@ -13,9 +13,6 @@ const Main = (props) => {
   const [nextUrl, setNextUrl] = useState()
   const [prevUrl, setPrevUrl] = useState()
   const [pokeDex, setPokeDex] = useState()
-  const [sortName, setSortName] = useState(false)
-  const [sortHeight, setSortHeight] = useState(false)
-  const [sortWeight, setSortWeight] = useState(false)
   const [search, setSearch] = React.useState('')
 
   const pokeFun = async () => {
@@ -40,19 +37,36 @@ const Main = (props) => {
     },
     [url],
   )
+  const filltered = !search
+    ? pokeData
+    : pokeData.filter((poked) =>
+        poked.name.toLowerCase().includes(search.toLowerCase()),
+      )
+
+  const sortByWeight = () => {
+    const sortweight = [...filltered].sort((a, b) => {
+      return a.weight - b.weight
+    })
+    setPokeData([])
+    setPokeData(sortweight)
+  }
+
+  const sortByHeight = () => {
+    const sortheight = [...filltered].sort((a, b) => {
+      return a.height - b.height
+    })
+    setPokeData([])
+    setPokeData(sortheight)
+  }
 
   const sortByName = () => {
+    const sortheight = [...filltered].sort((a, b) => {
+      return a.name.localeCompare(b.name)
+    })
     setPokeData([])
-    setSortName(true)
+    setPokeData(sortheight)
   }
-  const sortByWeight = () => {
-    setPokeData([])
-    setSortWeight(true)
-  }
-  const sortByHeight = () => {
-    setPokeData([])
-    setSortHeight(true)
-  }
+
   const setfilter = (e) => {
     setSearch(e.target.value)
   }
@@ -69,25 +83,12 @@ const Main = (props) => {
       const result = await axios.get(item.url)
       setPokeData((state) => {
         state = [...state, result.data]
-        if (sortName) {
-          state.sort((a, b) => (a.name > b.name ? 1 : -1))
-        } else if (sortWeight) {
-          state.sort((a, b) => (a.weight > b.weight ? 1 : -1))
-        } else if (sortHeight) {
-          state.sort((a, b) => (a.height > b.height ? 1 : -1))
-        } else {
-          state.sort((a, b) => (a.id > b.id ? 1 : -1))
-        }
+        state.sort((a, b) => (a.id > b.id ? 1 : -1))
         return state
       })
     })
   }
-  const filltered = !search
-    ? pokeData
-    : pokeData.filter((poked) =>
-        poked.name.toLowerCase().includes(search.toLowerCase()),
-      )
-  
+
   const mounted = useRef()
 
   useEffect(() => {
@@ -96,7 +97,7 @@ const Main = (props) => {
     } else {
       pokeFun()
     }
-  }, [url, sortName, sortHeight, sortWeight])
+  }, [url])
 
   return (
     <>
@@ -106,11 +107,21 @@ const Main = (props) => {
           <button data-testid="sortname" onClick={sortByName}>
             Sort by Name
           </button>
-          <button data-testid="sortByHeight" onClick={sortByHeight}>Sort by Height</button>
-          <button data-testid="sortByWeight" onClick={sortByWeight}>Sort by Weight</button>
-          <button data-testid="10page" onClick={() => setPagination(10)}>10 Per Page</button>
-          <button data-testid="20page" onClick={() => setPagination(20)}>20 Per Page</button>
-          <button data-testid="50page" onClick={() => setPagination(50)}>50 Per Page</button>
+          <button data-testid="sortByHeight" onClick={sortByHeight}>
+            Sort by Height
+          </button>
+          <button data-testid="sortByWeight" onClick={sortByWeight}>
+            Sort by Weight
+          </button>
+          <button data-testid="10page" onClick={() => setPagination(10)}>
+            10 Per Page
+          </button>
+          <button data-testid="20page" onClick={() => setPagination(20)}>
+            20 Per Page
+          </button>
+          <button data-testid="50page" onClick={() => setPagination(50)}>
+            50 Per Page
+          </button>
         </nav>
         <NextPrevBtn
           prevUrl={prevUrl}
