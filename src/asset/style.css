@@ -1,0 +1,335 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+}
+h1,h2 {
+    font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+html {
+  background-color: #ecf9ff;
+}
+
+body {
+  color: #272727;
+  font-family: 'Quicksand', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+   
+}
+.card-content {
+    display: flex;
+    flex: 1 1 auto; 
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 80px;
+}
+
+@media (max-width: 500px) {
+    .card { flex: 100%; } 
+}
+.pokeinfo {
+   width: 40rem;
+   margin: 120px auto;
+   background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+.card-details{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
+    
+}
+
+.abilities {
+  width: 100%;
+}
+.abilities .group{
+    padding: 0.2rem;
+}
+.base-stat {
+    margin-top: 2rem;
+}
+.btn-group {
+    display: flex;
+    flex: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+.btn-group button {
+    outline: none;
+    border: none;
+    width: 150px;
+    padding: 0.3rem 0;
+    margin: 1rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #b74555;
+    border-radius: 8px;
+}
+.h2 {
+    font-size: 3.56rem;
+    line-height: 110%;
+    margin: 2.3733333333rem 0 1.424rem 0;
+}
+.center {
+    text-align: center;
+}
+
+.card-details {
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+.hoverable {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+}
+.card-details .card-image {
+    position: relative;
+}
+.card-details .card-content {
+    padding: 24px;
+    border-radius: 0 0 2px 2px;
+}
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+table.striped>tbody>tr>td {
+    border-radius: 0;
+    text-transform: capitalize;
+}
+table.striped tr {
+    border-bottom: none;
+}
+.card-details .card-action:last-child {
+    border-radius: 0 0 2px 2px;
+}
+td, th {
+    padding: .3rem;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+.card-table td {
+    padding: 2px 5px;
+} 
+.card-table td span{
+  padding: 0 5px;
+} 
+.card-table th{
+    padding: 5px 5px;
+} 
+button {
+    text-align: center;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    border-radius: 4px;
+    margin: 0.3rem;
+    padding: 0.3rem 1rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: .9rem;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+} 
+.details a{
+color:#fff;
+text-decoration: none;
+text-transform: uppercase;
+}
+.back {
+  position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+  .main{
+    max-width: 1200px;
+    margin: 68px auto;
+  }
+  
+  h1 {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+  }
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  .cards_item img {
+    height: 120px;
+  }
+  .pokeinfo img {
+    height: auto;
+  }
+  
+  .btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+  .btn a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+  }
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  .card_image {
+      text-align: center;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .main input {
+    background: transparent;
+    border: 1px solid;
+    height: 26px;
+    border-radius: 4px;
+    padding: 2px 10px;
+  }
+  .cards_item {
+
+    padding: 1rem;
+  }
+  .main-heading {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    font-family: 'Quicksand', serif;
+    font-style: normal;
+    padding: 20px 0;
+    background: #1abc9c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .main-heading a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 22%;
+    }
+  }
+  
+  .card_main {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  }
+  
+  .card_title {
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  
+  .card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+  }
+  .made_by{
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+  }
+nav {
+    padding: 1rem;
+    margin: 5px auto;
+}
+.header {
+    padding: 10px 0 ;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.left {
+  float: left;
+  width: 18rem;
+}
+
+.right {
+  float: right;
+  width: 18rem;
+}
+@media (max-width: 600px) {
+  .left {
+    float: left;
+    width: 20rem;
+  }
+  
+  .right {
+    float: right;
+    width: 20rem;
+  }
+  .pokeinfo {
+    width: 25rem;
+ }
+}
