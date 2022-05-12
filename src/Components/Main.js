@@ -87,6 +87,7 @@ const Main = (props) => {
     : pokeData.filter((poked) =>
         poked.name.toLowerCase().includes(search.toLowerCase()),
       )
+  
   const mounted = useRef()
 
   useEffect(() => {

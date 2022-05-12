@@ -8,14 +8,15 @@ const Card = ({ pokemon, loading }) => {
         <h1>Loading...</h1>
       ) : (
         pokemon &&
-        pokemon.map((item) => {
+        pokemon.map((item,index) => {
           return (
             <>
-              <li data-testid="showdetails"  className="cards_item" key={item.id}>
+              <li data-testid={`card-item-${index}`}  className="cards_item" key={item.id}>
                 <div className="card_main card_content">
                   <div className="card_image">
                     <img
                       src={` https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.id}.png`}
+                      alt={item.name}
                     />
                   </div>
                   <table className="bordered card-table ">

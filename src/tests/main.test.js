@@ -1,6 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Main from '../Components/Main';
+import { BrowserRouter } from 'react-router-dom'
 
+const MockMain =()=>{
+  <BrowserRouter>
+  <Main />
+  </BrowserRouter>
+}
 
 describe("Main",()=>{
   it('sortname', async() => {
