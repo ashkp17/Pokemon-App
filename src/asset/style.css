@@ -65,7 +65,7 @@ body {
     flex: 100%;
     flex-wrap: wrap;
     justify-content: flex-end;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 .btn-group button {
     outline: none;
