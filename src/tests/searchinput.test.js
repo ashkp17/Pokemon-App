@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import SearchInput from '../Components/SearchInput'
+import SearchInput from '../components/SearchInput'
 
 
 describe("SearchInput", ()=> {

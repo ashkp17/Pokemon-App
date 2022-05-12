@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Pokeinfo from '../Components/PokeInfo'
+import Pokeinfo from '../components/PokeInfo'
 
 test('renders Pokeinfo', () => {
   render(<Pokeinfo />)

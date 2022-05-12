@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Pokedetail from '../Components/PokeDetail'
+import Pokedetail from '../components/PokeDetail'
 import { BrowserRouter } from 'react-router-dom'
 
 const MockPokeDetail = ()=>{

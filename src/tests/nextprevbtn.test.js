@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import NextPrevBtn from '../Components/NextPrevBtn'
+import NextPrevBtn from '../components/NextPrevBtn'
 
 
 describe("NextPrevBtn", ()=> {

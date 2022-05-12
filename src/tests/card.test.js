@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Card from '../Components/card';
+import Card from '../components/card';
 import { BrowserRouter } from 'react-router-dom'
 
 const MockCard = ()=> {

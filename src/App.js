@@ -2,8 +2,8 @@ import React from 'react'
 import './asset/App.css'
 import './asset/style.css'
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
-import Main from './Components/Main'
-import PokeDetail from './Components/PokeDetail'
+import Main from './components/Main'
+import PokeDetail from './components/PokeDetail'
 
 const NoMatchRoute = () => <div>404 Page</div>
 const App = () => {
