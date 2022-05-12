@@ -174,7 +174,7 @@ text-transform: uppercase;
 }
   .main{
     max-width: 1200px;
-    margin: 68px auto;
+    margin: 0px auto;
   }
   
   h1 {
@@ -243,15 +243,10 @@ text-transform: uppercase;
     font-family: 'Quicksand', serif;
     font-style: normal;
     padding: 20px 0;
-    background: #1abc9c;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1;
   }
   .main-heading a {
     text-decoration: none;
-    color: #fff;
   }
 
   @media (min-width: 40rem) {
