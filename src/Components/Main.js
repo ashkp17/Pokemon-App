@@ -39,10 +39,10 @@ const Main = (props) => {
   )
   const filltered = !search
     ? pokeData
-    : pokeData.filter((poked) =>
-        poked.name.toLowerCase().includes(search.toLowerCase())
-      // to filter by abilities
-      //poked.abilities[0].ability.name.toLowerCase().includes(search.toLowerCase())
+    : pokeData.filter(
+        (poked) => poked.name.toLowerCase().includes(search.toLowerCase()),
+        // to filter by abilities
+        //poked.abilities[0].ability.name.toLowerCase().includes(search.toLowerCase())
       )
 
   const sortByWeight = () => {
@@ -105,7 +105,7 @@ const Main = (props) => {
     <>
       <div className="main">
         <nav>
-          <SearchInput search={search} setSearch={setfilter} />
+          <div className='row'>
           <button data-testid="sortname" onClick={sortByName}>
             Sort by Name
           </button>
@@ -124,6 +124,10 @@ const Main = (props) => {
           <button data-testid="50page" onClick={() => setPagination(50)}>
             50 Per Page
           </button>
+          </div>
+          <div className='search-row'>
+          <SearchInput search={search} setSearch={setfilter} />
+          </div>
         </nav>
         <NextPrevBtn
           prevUrl={prevUrl}
