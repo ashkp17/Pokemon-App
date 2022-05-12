@@ -40,7 +40,9 @@ const Main = (props) => {
   const filltered = !search
     ? pokeData
     : pokeData.filter((poked) =>
-        poked.name.toLowerCase().includes(search.toLowerCase()),
+        poked.name.toLowerCase().includes(search.toLowerCase())
+      // to filter by abilities
+      //poked.abilities[0].ability.name.toLowerCase().includes(search.toLowerCase())
       )
 
   const sortByWeight = () => {
