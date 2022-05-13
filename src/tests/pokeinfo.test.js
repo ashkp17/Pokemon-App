@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen,waitFor } from '@testing-library/react'
 import Pokeinfo from '../components/PokeInfo'
 
-test('renders Pokeinfo', () => {
-  render(<Pokeinfo />)
-  //    const linkElement = screen.getByText(/Cards Page/i);
-  //   expect(linkElement).toBeInTheDocument();
-})
+
+describe('Pokeinfo',()=>{
+  it('renders Pokeinfo', async() => {
+    render(<Pokeinfo />)
+  })
+
+  it('should render pokemon names when api responds', async () => {
+    render(<Pokeinfo />);
+     await waitFor(()=> {
+       screen.getAllByAltText("bulbasaur")
+     })
+  })
+
+}) 
+
